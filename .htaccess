@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+
+    # Match the host, if you wish
+    #RewriteCond %{HTTP_HOST} ^domain\.com$
+
+    RewriteRule record/(\d) /record/rec-view.php?id=$1 [NC,L]
+</IfModule>
